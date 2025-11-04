@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Unsere Momente 💞</title>
+<style>
+  body { 
+    background-color: #fff0f5;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+  .quote {
+    font-size: 1.3rem;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  img {
+    max-width: 80%;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+<body>
+  <h1>Unsere schönsten Erinnerungen 💫</h1>
+  <audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="quotes">
+    <div class="quote">"Mit dir ist jeder Moment ein kleines Abenteuer."</div>
+    <div class="quote">"Du bist mein Zuhause."</div>
+    <div class="quote">"Ich liebe dich – heute, morgen, immer."</div>
+  </div>
+
+  <div>
+    <img src="bild1.jpg">
+    <img src="bild2.jpg">
+    <img src="bild3.jpg">
+  </div>
+
+  <script>
+    const quotes = document.querySelectorAll('.quote');
+    let i = 0;
+    function showQuotes() {
+      quotes.forEach((q, idx) => q.style.opacity = idx === i ? 1 : 0);
+      i = (i + 1) % quotes.length;
+    }
+    setInterval(showQuotes, 4000);
+    showQuotes();
+  </script>
+</body>
+</html>
