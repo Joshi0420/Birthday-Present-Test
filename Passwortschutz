@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Überraschung 💌</title>
+<style>
+  body { font-family: 'Poppins', sans-serif; background: #f7f0f5; text-align: center; padding-top: 100px; }
+  input, button { padding: 10px; font-size: 1rem; border-radius: 10px; border: none; }
+  button { background-color: #ff7fa2; color: white; cursor: pointer; }
+</style>
+</head>
+<body>
+  <h1>💖 Gib unser Passwort ein 💖</h1>
+  <input type="password" id="pw" placeholder="Passwort">
+  <button onclick="checkPW()">Los geht’s!</button>
+
+  <script>
+    function checkPW() {
+      const pw = document.getElementById("pw").value;
+      if (pw === "unsersong2020") {  // <--- DEIN Passwort hier
+        window.location.href = "gallery.html";
+      } else {
+        alert("Falsches Passwort 😜");
+      }
+    }
+  </script>
+</body>
+</html>
